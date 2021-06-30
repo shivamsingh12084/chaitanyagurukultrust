@@ -1,0 +1,381 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{%block title %}Home{% endblock title %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div id="slidy-container">
+    <figure id="slidy">
+      {% for news in images %}
+      <img src="{{news.banner.url}}" alt="eyes" >
+      {% endfor %}
+      
+    </figure>
+  </div>
+<script src="{% static 'js/slider.js' %}"></script>
+<div class="welcome-title">
+    <h1>Welcome to the Chaitanya Gurukul Trust</h1>
+</div>
+<div class="welcome-note">
+    <p>
+        Chaitanya Gurukul Trust ( ) is a Non Profitable organization, working towards development of education scenario in remotest part of the world especially underdeveloped state of India like Bihar. What we believe is that if you give an apple to a person he will eat but if you teach him “A” for apple, he will never forget and can earn apple by himself. So our motto is “Jnanam Paramodhyeyam” : meaning knowledge is the ultimate aim and mission is to provide world class education from remotest place.
+    </p>
+</div>
+<div class="motive-awards-container">
+    <div class="motive-awards">
+        <div class="motive">
+            <h2> || ज्ञानम परमोध्यायं ||</h2>
+            <h4> knowledge is the ultimate aim</h4>
+            
+            <p>
+                Chaitanya means pure Consciousness, the cosmic intelligence. Chaitanya, is thus the invisible essence of human intelligence, the cosmic root of monadic individuality, and the cosmic intelligence-force which is the intrinsic or essential consciousness behind and within individuality.
+
+
+            </p>
+    
+        </div>
+        <!-- Whole styling and scripting of awards goes here. -->
+
+
+        <div class="awards">
+            <style>
+                * {box-sizing: border-box}
+                
+                
+                /* Slideshow container */
+                .slideshow-container {
+                  position: relative;
+                  background: var(--navbackground);
+                  border-radius: .2em;
+                }
+                
+                /* Slides */
+                .mySlides {
+                  display: none;
+                  padding: 80px;
+                  text-align: center;
+                }
+                
+                /* Next & previous buttons */
+                .prev, .next {
+                  cursor: pointer;
+                  position: absolute;
+                  top: 50%;
+                  width: auto;
+                  margin-top: -30px;
+                  padding: 16px;
+                  color: #888;
+                  font-weight: bold;
+                  font-size: 20px;
+                  border-radius: 0 3px 3px 0;
+                  user-select: none;
+                }
+                
+                /* Position the "next button" to the right */
+                .next {
+                  position: absolute;
+                  right: 0;
+                  border-radius: 3px 0 0 3px;
+                }
+                
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                  background-color: rgba(0,0,0,0.8);
+                  color: white;
+                }
+                
+                /* The dot/bullet/indicator container */
+                .dot-container {
+                    text-align: center;
+                    padding: 20px;
+                    background: #ddd;
+                }
+                
+                /* The dots/bullets/indicators */
+                .dot {
+                  cursor: pointer;
+                  height: 15px;
+                  width: 15px;
+                  margin: 0 2px;
+                  background-color: #bbb;
+                  border-radius: 50%;
+                  display: inline-block;
+                  transition: background-color 0.6s ease;
+                }
+                
+                /* Add a background color to the active dot/circle */
+                .active, .dot:hover {
+                  background-color: #717171;
+                }
+                
+                /* Add an italic font style to all quotes */
+                q {font-style: italic;}
+                
+                /* Add a blue color to the author */
+                .author {color: cornflowerblue;}
+                </style>
+                
+                
+                <div class="slideshow-container">
+                
+                <div class="mySlides">
+                  <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+                  <p class="author">- John Keats</p>
+                </div>
+                
+                <div class="mySlides">
+                  <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+                  <p class="author">- Ernest Hemingway</p>
+                </div>
+                
+                <div class="mySlides">
+                  <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+                  <p class="author">- Thomas A. Edison</p>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                
+                <div class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+                <!-- Whole styling and scripting of awards ends here. -->
+           
+            
+    
+        </div>
+    </div>
+</div>
+<div class="addmission-corner">
+    <h4>Online Admissions for the Academic Session 2021-22 are open.</h4>
+    <p>For more details, please contact: +91-9926304730, +91-8889995345, +91-6262028466</p>
+    <a href="" target="_blank">Click here to know more</a>
+
+
+</div>
+<div class="announcements">
+    <div class="news-flash">
+        <div class="first-box">
+            <div class="news-label">
+                <label>Circulars</label>
+            </div>
+            <div class="container">
+                <ul>
+                  <li class="headline-list">
+                    <h2>Head line 1</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 2</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 3</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 4</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 5</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </liclass>
+                  <li class="headline-list">
+                    <h2>Head line 6</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 7</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 8</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="news-button">
+                  <button type="submit">
+                      View all
+                  </button>
+              </div>
+            
+            
+            
+    
+        </div>
+        <div class="second-box">
+            <div class="news-label">
+                <label>Latest News</label>
+            </div>
+            <div class="container">
+                <ul>
+                  <li class="headline-list">
+                    <h2>Head line 1</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 2</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 3</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 4</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 5</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </liclass>
+                  <li class="headline-list">
+                    <h2>Head line 6</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 7</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 8</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="news-button">
+                  <button type="submit">
+                      View all
+                  </button>
+              </div>
+            
+            
+        </div>
+        <div class="third-box">
+            <div class="news-label">
+                <label>Upcoming Event</label>
+            </div>
+            <div class="container">
+                <ul>
+                  <li class="headline-list">
+                    <h2>Head line 1</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 2</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 3</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 4</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 5</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </liclass>
+                  <li class="headline-list">
+                    <h2>Head line 6</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 7</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  <li class="headline-list">
+                    <h2>Head line 8</h2>
+                    <p>News detail just a line jhghdsbd hsdssdhjhdjshdjsahdjs</p>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="news-button">
+                  <button type="submit">
+                      View all
+                  </button>
+              </div>
+            
+    
+        </div>
+    </div>
+</div>
+<div class="gallary">
+    <div class="gallary-container">
+
+        <h1 class="gallary-heading">Campus Tour / gallary<span></span></h1>
+    
+        <div class="gallery">
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+            </div>
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop" alt="sunset behind San Francisco city skyline">
+            </div>
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+            </div>
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+            </div>
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+            </div>
+    
+            <div class="gallery-item">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+            </div>
+    
+        </div>
+    
+    </div>
+</div>
+
+
+
+<script src="{% static 'js/news-flash.js' %}"></script>
+{% endblock content%}

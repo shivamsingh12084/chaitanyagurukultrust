@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  .slideshow-container{
+    width:260px;
+    margin:20px auto;
+    height:300px;
+    background-color:#333;
+    overflow:hidden;
+  }
+  .newsbox ul {
+    list-style:none;
+    position:relative;
+  }
+  li{
+    height:100px;
+    background-color:rgba(57, 173, 117,0.3);
+     text-align:center;
+    border-bottom:1px solid #333;
+  }
+  
+  
