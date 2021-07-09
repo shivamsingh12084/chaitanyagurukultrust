@@ -6,9 +6,9 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <div id="slidy-container">
     <figure id="slidy">
-      {% for news in images %}
-      <img src="{{news.banner.url}}" alt="eyes" >
-      {% endfor %}
+      
+      <img src="{% static 'images/banner1.jpg' %}" alt="eyes" >
+      
       
     </figure>
   </div>
